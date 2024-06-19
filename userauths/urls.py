@@ -1,6 +1,4 @@
-import imp
 from django.urls import path
-from userauths import *
 from userauths.views import RegisterView, loginView, logoutView
 
 urlpatterns = [
