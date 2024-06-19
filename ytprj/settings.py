@@ -55,9 +55,14 @@ INSTALLED_APPS = [
     # Third Party Apps
     'import_export',
     'taggit',
+
+    # GOTTA HAVES!
+    'debug_toolbar',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -163,3 +168,7 @@ JAZZMIN_SETTINGS = {
     "copyright": "youtube.com",
     # "order_with_respect_to": ["blog"]
 }
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
